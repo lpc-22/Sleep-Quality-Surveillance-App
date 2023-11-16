@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".helpers.AudioHelperActivity">
+
+    <TextView
+        android:id="@+id/msg1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:text="Have a Good Sleep!\nRemaining Time"
+        android:textSize="@dimen/_24sdp"
+        android:textColor="@color/primary_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/countDownTime"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:gravity="center"
+        android:text=" "
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/_36sdp"
+        app:layout_constraintTop_toBottomOf="@+id/msg1" />
+
+    <TextView
+        android:id="@+id/msg2"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="The sound classifiier have been started, you can close the screen and put the phone near your bed."
+        android:textColor="@color/secondary_text"
+        android:textSize="@dimen/_14sdp"
+        android:justificationMode="inter_word"
+        app:layout_constraintBottom_toTopOf="@+id/btn_awake"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/countDownTime" />
+
+    <Button
+        android:id="@+id/btnAwake"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:onClick="endRecording"
+        android:text="I'm Awake"
+        android:textColor="@color/primary_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+<!--    <Button-->
+<!--        android:id="@+id/btnCancel"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginBottom="50dp"-->
+<!--        android:onClick="cancelRecording"-->
+<!--        android:text="Cancel"-->
+<!--        android:textColor="@color/primary_text"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.5"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

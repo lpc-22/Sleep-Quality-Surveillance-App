@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">WellSleep</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_onboarding">OnboardingActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <!--  ==================== OnBoarding Screen ====================  -->
+    <string name="on_boarding_intro_1">WellSleep have utilized the <b>built-in microphone</b> and <b>Audio Deep Learning Technology</b> to classify different sound events. The system will collect the event that happens during sleep and analysis the user’s <b>sleep quality</b>.\n\nISleep understand and respect user\'s privacy, all recording from sleep would not be store!</string>
+</resources>

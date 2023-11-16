@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/alarm"
+        android:icon="@drawable/baseline_alarm_24"
+        android:title="Alarm" />
+
+    <item
+        android:id="@+id/classification_result"
+        android:icon="@drawable/baseline_event_note_24"
+        android:title="Classification" />
+
+    <item
+        android:id="@+id/history"
+        android:icon="@drawable/baseline_history_24"
+        android:title="Record" />
+
+    <item
+        android:id="@+id/setting"
+        android:icon="@drawable/baseline_settings_24"
+        android:title="Setting" />
+</menu>

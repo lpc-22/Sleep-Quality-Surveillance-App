@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context=".HistoryFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:id="@+id/clickText_Previous"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_margin="1dp"
+            android:background="@drawable/round_black_white10_20"
+            android:text="Previous" />
+
+        <TextView
+            android:id="@+id/currentDate"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_margin="1dp"
+            android:background="@drawable/round_black_white10_20"
+            android:text="2024-04-09"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/clickText_Next"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_margin="1dp"
+            android:background="@drawable/round_black_white10_20"
+            android:text="Next" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--  Sleep Efficiency  -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="20dp"
+                android:padding="15dp"
+                android:background="@drawable/round_black_white10_20"
+                android:orientation="horizontal">
+                <!--  Left  -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_marginVertical="0dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_centerVertical="true"
+                        android:text="Sleep Efficiency"
+                        android:textColor="@color/primary_text"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/startAndEndTime"
+                        android:layout_marginVertical="0dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_centerVertical="true"
+                        android:text="2023/04/01 22:00:00\n2023/04/02 08:30:25"
+                        android:textColor="@color/primary_text" />
+
+                    <TextView
+                        android:id="@+id/sleepEfficiency_duration"
+                        android:layout_marginVertical="0dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_centerVertical="true"
+                        android:text="8 hours, 30 minutes"
+                        android:textColor="@color/primary_text" />
+                </LinearLayout>
+                <!-- Right -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true">
+                    <TextView
+                        android:id="@+id/SE_percentage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/primary_text"
+                        android:text="-"
+                        android:textSize="@dimen/_25ssp"/>
+                </LinearLayout>  <!-- End of Right -->
+            </RelativeLayout>   <!--  End of Sleep Efficiency  -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="20dp"
+                android:padding="15dp"
+                android:background="@drawable/round_black_white10_20"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_marginVertical="0dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_centerVertical="true"
+                    android:text="Sleep State"
+                    android:textColor="@color/primary_text"
+                    android:textStyle="bold"/>
+
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/SE_chart"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"/>
+
+            </LinearLayout>
+
+            <!--  Sleep Sound  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="20dp"
+                android:padding="15dp"
+                android:background="@drawable/round_black_white10_20"
+                android:orientation="horizontal">
+                <!--  Breathing  -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_marginVertical="0dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="Breathing"
+                        android:layout_gravity="center"
+                        android:textColor="@color/primary_text"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:id="@+id/numberBreath"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/primary_text"
+                        android:layout_gravity="center"
+                        android:text="-"
+                        android:textSize="@dimen/_25ssp"/>
+                </LinearLayout>
+                <!-- Cough -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_marginVertical="0dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="Cough"
+                        android:layout_gravity="center"
+                        android:textColor="@color/primary_text"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:id="@+id/numberCough"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/primary_text"
+                        android:layout_gravity="center"
+                        android:text="-"
+                        android:textSize="@dimen/_25ssp"/>
+                </LinearLayout>
+                <!-- Move -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_marginVertical="0dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="Move"
+                        android:layout_gravity="center"
+                        android:textColor="@color/primary_text"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:id="@+id/numberMove"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/primary_text"
+                        android:layout_gravity="center"
+                        android:text="-"
+                        android:textSize="@dimen/_25ssp"/>
+                </LinearLayout>
+                <!-- Noise -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_marginVertical="0dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="Noise"
+                        android:layout_gravity="center"
+                        android:textColor="@color/primary_text"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:id="@+id/numberNoise"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/primary_text"
+                        android:layout_gravity="center"
+                        android:text="-"
+                        android:textSize="@dimen/_25ssp"/>
+                </LinearLayout>
+                <!-- Snore -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_marginVertical="0dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="Snore"
+                        android:layout_gravity="center"
+                        android:textColor="@color/primary_text"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:id="@+id/numberSnore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/primary_text"
+                        android:layout_gravity="center"
+                        android:text="-"
+                        android:textSize="@dimen/_25ssp"/>
+                </LinearLayout>
+            </LinearLayout>   <!--  End of Sleep Sound  -->
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
